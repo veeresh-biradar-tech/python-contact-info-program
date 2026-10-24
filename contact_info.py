@@ -53,7 +53,13 @@ def contact_info():
             }
             print(f"\nContact '{co_name}' added successfully!")
             
-        
+        elif choice == 3:
+            co_name = input("Enter name to delete contact: ").lower()
+            if co_name in contact_details:
+                contact_details.pop(co_name)
+                print("Details deleted successfully!")
+            else:
+                print("Name not matched, so contact not deleted.")
                 
         else:
             print("Invalid choice! Please select 1, 2, or 3.")
